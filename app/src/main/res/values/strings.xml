@@ -1,0 +1,223 @@
+<resources>
+    <string name="app_name">eBele</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+
+    <!-- Navigation Drawer menu labels -->
+    <string name="nav_home">Accueil</string>
+    <string name="nav_agenda">Agenda</string>
+    <string name="nav_news">News</string>
+    <string name="nav_commaunaute">Communauté</string>
+    <string name="nav_journal">Journal</string>
+    <string name="nav_sante">Santé</string>
+    <string name="nav_accouchement">Date accouchement</string>
+    <string name="nav_espace_shopping">Espace Shopping</string>
+    <string name="nav_signaler">Signaler une utilisatrice</string>
+    <string name="nav_feedback">Feedback</string>
+    <string name="nav_settings">Parametrage</string>
+    <string name="nav_help">Aide</string>
+    <string name="nav_about_us">À propos de nous</string>
+    <string name="nav_logout">Se deconnecter</string>
+
+    <!-- Toolbar titles when navigation menu item is selected -->
+    <string-array name="nav_item_activity_titles">
+        <item>Accueil</item>
+        <item>Agenda</item>
+        <item>News</item>
+        <item>Communaute</item>
+        <item>Journal</item>
+        <item>Santé</item>
+        <item>Date accouchement</item>
+        <item>Espace Shopping</item>
+        <item>Signaler une utilisatrice</item>
+        <item>Feedback</item>
+        <item>Parametrage</item>
+        <item>Aide</item>
+    </string-array>
+
+    <string name="activity_title_about_us">À propos de nous</string>
+    <string name="activity_title_privacy_policy">Privacy Policy</string>
+    <string name="action_clear_all">Tout suppriner</string>
+    <string name="action_logout">Se deconnecter</string>
+    <string name="action_mark_all_read">Marquer tout comme lu </string>
+    <string name="privacy_policy">Privacy Policy</string>
+	
+
+
+    <string name="ja">JA</string>
+    <string name="nein">Nein</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+    <string name="desc"></string>
+	<string name="bild_auswaehlen">Bild auswählen</string>
+<!-- Bottom  -->
+    <string name="btn_anmeldung">ANMELDUNG</string>
+    <string name="btn_passwort_wiederherstellung">WIEDERHERSTELLEN</string>
+    <string name="btn_registrierung">REGISTRIERUNG</string>
+    <string name="btn_link_to_registrierung">Nicht registriert? Zur Registrierung.</string>
+    <string name="btn_link_to_wiederherstellung">Passwort vergessen? Zur Wiederherstellung.</string>
+    <string name="btn_link_fromWiederherstellung_toAnmeldung">Zurück zur Anmeldung</string>
+    <string name="btn_link_to_anmeldung">Schon registriert! Zur Anmeldung.</string>
+    <string name="btn_auslogen">AUSLOGEN</string>
+
+    
+    <string name="hint_email">Email</string>
+    <string name="hint_email_wiederholt">Email wiederholen</string>
+    <string name="hint_passwort">Passwort</string>
+    <string name="hint_passwortNeu">Neues Passwort</string>
+    <string name="hint_passwortNeu2">Neues Passwort wiederholen</string>
+    <string name="hint_geheimnis">Ihr Geheimnis</string>
+    <string name="hint_geheimnis2">Neues Geheimnis</string>
+    <string name="hint_passwort_wiederholt">Passwort wiederholen</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_secret">Ihr Geheimnis für die Wiederherstellung Ihrer vergessenen Daten</string>
+    <string name="willkommen">Willkommen, hier stellen wir die App kurs vor</string>
+    <string name="name">Kompleter Name</string>
+    <string name="Bewertung_Header1">Ihre Meinung ist uns wichtig!</string>
+    <string name="Bewertung_Header2">Ihre Zufriedenheit ist unsere Mission!</string>
+    <string name="Bewertung_Header3">Wie finden Sie die App?</string>
+    <string name="wuensche">Wie könnte die App Ihre Wünsche erfüllen?</string>
+    <string name="hint_wuensche">Hier Ihre Meinung bitte!</string>
+    <string name="schlecht">Schlecht</string>
+    <string name="befriedigend">Befriedigend</string>
+    <string name="gut">Gut</string>
+    <string name="sehr_gut">Sehr gut</string>
+    <string name="super_super">  Super</string>
+        
+<!-- Notizen -->
+	<string name="keine_note">Keine Note</string>
+	<string name="keine_nutzerin">Keine Nutzerin</string>
+	<string name="keine_info">Keine Information</string>
+	<string name="title">Titel</string>
+    <string name="hier_schreiben">Hier schreiben ...</string>
+    <string name="edit">Edit</string>
+    <string name="aendern">Profil Bearbeiten</string>
+    <string name="notiz_delete">Diese Notiz löschen?</string>
+	<string name="delete">Delete</string>
+<!-- Chat -->
+    <string name="btn_send">Senden</string>
+  
+ <!-- Infos -->
+   	
+   	<!-- SchwangerschaftsInfo --> 
+    <string name="Schwangerschaftsverlauft">Infos über den Schwangerschaftsverlauft</string>
+
+    <!-- KliniksInfo -->
+  	<string name="klinik_liste">Auflistung von empfohlenden Kliniken</string>
+
+    <!-- StudentinInfo -->
+  	<string name="studentin_info">Hilfreiche Infos für Studentin mit Kind</string>
+  	
+    <!-- AuslaenderinInfo -->
+  	<string name="auslaenderin_info">Hilfreiche Infos für Ausländerin mit Kind</string>
+  	<string name="auslaenderin">Ausländerin</string>	
+  	<string name="klinik">Kliniken</string>	
+  	<string name="schwangerschaft">Schwangerschaft</string>	
+  	<string name="studentin">Studentin</string>	
+<!-- Termin -->
+	<string name="termin">Hier werden Termine als Kalender angezeigt</string>
+	<string name="remind_me">RemindMe</string>
+	
+<!-- Tagebuch-->
+	<string name="tagebuch">Hier wird das Tagebuch verwaltet</string>
+
+<!--Notizen-->
+	<string name="notizen">Hier werden Notizen verwaltet</string>
+		
+<!-- Meine Gesundheit -->
+	<!-- Blutdruck erfassen -->
+	<string name="blutdruck">Tragen Sie bitte Ihren Blutdruckwert ein</string>
+	<string name="einheit1">mmHg</string>
+	<string name="einheit2">bpm</string>
+    <string name="hint_systolisch">116</string>
+    <string name="hint_diastolisch">78</string>
+    <string name="hint_puls">67</string>
+	    		<!-- Blutdruckmessungen -->
+	<string name="blutdruck_messungen">Hier werden die Blutdruckmessungen als grafik angezeigt</string>
+	<string name="id">Id</string>	
+	<string name="nr">Nr</string>	
+	<string name="erstellt_datum">Erfasst am</string>	
+	<string name="systolisch">Systolisch</string>	
+	<string name="diastolisch">Diastolisch</string>	
+	<string name="bewertung">Bewertung</string>	
+	<string name="als_email_senden">Blutdruckwerte dem Arzt senden</string>
+						
+<!-- Stichtag -->
+	<string name="oder">Oder</string>
+	<string name="nochNicht">Sie wissen Ihren Stichtag noch nicht?</string>
+	<string name="berechnen">Hier zur Berechnung</string>
+	<string name="btn_speichern">Speichern</string>
+	<string name="mein_Stichtag">Mein Stichtag</string>
+	<string name="combobox_Stichtag">Combobox Stichtag</string>
+	<string name="letzte_blutungstag">Letzter Blutungstag: </string>
+	<string name="zyklus_laenge">Zykluslänge:</string>
+	<string name="zyklus">28</string>		
+<!-- Benutzerin melden -->
+	<string name="benutzerin_melden">Hier können merkwürdige Benutzerinverhalten gemeldet werden</string>
+	<string name="hint_meldung">(*)Bitte beschreiben das auffällige Verhalten hier...</string>
+	<string name="meldung_senden">MELDEN</string>
+	<string name="hint_wer">Wer?</string>
+	<string name="hint_wann">Wann?</string>
+<!-- Ueber uns -->
+	<string name="ueber_uns">Hier stellen wir uns kurz vor</string>
+		
+			
+  <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item >Home</item>
+        <item >Infos</item>
+        <item >Termine</item>
+        <item >Communities</item>
+        <item >Tagebuch</item>
+        <item >Meine Gesundheit</item>
+        <item >Stichtag berechnen</item>
+        <item >Benutzerin melden</item>
+        <item >Feedback</item>
+        <item >Einstellungen</item>
+        <item >Über uns</item>
+        <item >Hilfe</item>
+        <item >Abmelden</item>
+    </string-array>
+    
+    <!-- Nav Drawer List Item Icons -->
+    <!-- In der reihenfolge der MenuItem sortieren -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_home</item>
+        <item>@drawable/info</item>
+        <item>@drawable/termin</item>
+        <item>@drawable/community</item>
+        <item>@drawable/tagebuch</item>
+        <item>@drawable/meine_gesundheit</item>
+        <item>@drawable/stichtag</item>
+        <item>@drawable/user_melden1</item>
+        <item>@drawable/feedback</item>
+        <item>@drawable/setting</item>
+        <item>@drawable/ueber_uns</item>
+        <item>@drawable/help</item>
+        <item>@drawable/abmelden</item>
+        </array>
+
+	<string-array name="info_typ">
+	    <item>Auslaenderin</item>
+	    <item>Klinik</item>
+	    <item>Schwangerschaft</item>
+	    <item>Studentin</item>
+   	</string-array>
+    
+    <string name="action_edit">Edit</string>
+    <string name="action_add">Add</string>
+    
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+
+    <!-- Checkbox  -->
+    <string name="chk_schliessen">Konto schliessen</string>
+    <string name="chk_loeschen">Konto löschen</string>
+
+	
+</resources>

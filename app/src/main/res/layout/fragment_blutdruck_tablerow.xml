@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android">
+ 
+	<TextView 
+	    android:id="@+id/item_nr"
+	    style="@style/TableItem"
+	    android:text=""/>
+<!-- 	<TextView 
+	    android:id="@+id/item_id"
+	    style="@style/TableItem"
+	    android:text=""/>
+ -->	
+    <TextView 
+	    android:id="@+id/item_datum"
+	    style="@style/TableItem"
+	    android:text=""/>
+	<TextView 
+	    android:id="@+id/item_systolisch"
+	    style="@style/TableItem"
+	    android:text=""/>
+	<TextView 
+	    android:id="@+id/item_diastolisch"
+	    style="@style/TableItem"
+	    android:text=""/>
+			
+</TableRow>

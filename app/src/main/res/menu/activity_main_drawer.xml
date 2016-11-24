@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/nav_home" />
+        <item
+            android:id="@+id/nav_agenda"
+            android:icon="@drawable/ic_event_black_24dp"
+            android:title="@string/nav_agenda" />
+        <item
+            android:id="@+id/nav_news"
+            android:icon="@drawable/ic_notifications_black_24dp"
+            android:title="@string/nav_news" />
+
+        <item
+            android:id="@+id/nav_communaute"
+            android:icon="@drawable/ic_people_black_24dp"
+            android:title="@string/nav_commaunaute" />
+
+        <item
+            android:id="@+id/nav_journal"
+            android:icon="@drawable/ic_note_black_24dp"
+            android:title="@string/nav_journal" />
+        <item
+            android:id="@+id/nav_sante"
+            android:icon="@drawable/ic_favorite_black_24dp"
+            android:title="@string/nav_sante" />
+        <item
+            android:id="@+id/nav_accouchement"
+            android:icon="@drawable/ic_child_care_black_24dp"
+            android:title="@string/nav_accouchement" />
+        <item
+            android:id="@+id/nav_espace_shopping"
+            android:icon="@drawable/ic_add_shopping_cart_black_24dp"
+            android:title="@string/nav_espace_shopping" />
+
+        <item
+            android:id="@+id/nav_signaler"
+            android:icon="@drawable/ic_record_voice_over_black_24dp"
+            android:title="@string/nav_signaler" />
+
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/ic_thumbs_up_down_black_24dp"
+            android:title="@string/nav_feedback" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="@string/nav_settings" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_help_black_24dp"
+            android:title="@string/nav_help" />
+    </group>
+
+    <item android:title="Other">
+        <menu>
+            <item
+                android:id="@+id/nav_about_us"
+                android:title="@string/nav_about_us" />
+            <item
+                android:id="@+id/nav_privacy_policy"
+                android:title="@string/privacy_policy" />
+        </menu>
+    </item>
+
+    <group>
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_power_settings_new_black_24dp"
+            android:title="@string/nav_logout" />
+    </group>
+
+</menu>

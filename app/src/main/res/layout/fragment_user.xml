@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_frame"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/header"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_alignParentTop="true"
+    	android:gravity="center" >
+	    
+	    <LinearLayout
+	        android:id="@+id/titel"
+		    android:layout_marginTop="10dip"
+		    android:layout_marginLeft="10dip"
+		    android:layout_marginRight="10dip"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+		    android:background="@drawable/note_bg_selector"         
+	        android:padding="10dip" >
+		    
+		    <TextView
+		        android:id="@+id/name"
+		        android:layout_width="0dp"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        android:layout_marginRight="15dp"
+		        android:text="Name" />
+			    
+		    <TextView
+		        android:id="@+id/email"
+		        android:layout_height="wrap_content"
+		        android:layout_width="0dp"
+		        android:layout_marginRight="15dp"
+		        android:layout_weight="1"
+		        android:text="Email" />
+			    
+		    <TextView
+		        android:id="@+id/status"
+		        android:layout_weight="1"
+		        android:layout_width="0dp"
+		        android:layout_height="wrap_content"
+		        android:text="Status" />
+	    </LinearLayout>
+	</RelativeLayout>
+	    
+    <ListView
+        android:id="@+id/user_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="10dip"
+        android:layout_below="@id/header"
+        android:cacheColorHint="#00000000"
+        android:divider="@android:color/transparent"
+        android:drawSelectorOnTop="false"
+        android:listSelector="@android:color/transparent" />
+
+    <TextView
+        android:id="@android:id/empty"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_below="@id/user_list"
+        android:gravity="center"
+        android:text="@string/keine_nutzerin" />
+    
+	<View android:layout_width="fill_parent" android:layout_height="2dip" android:background="#333333" />
+	
+    <RelativeLayout
+        android:id="@+id/footer"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_alignParentBottom="true"
+    	android:gravity="center_horizontal" >
+		<LinearLayout
+	        android:id="@+id/menubar"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:orientation="horizontal"
+			android:gravity="center_horizontal"
+	        android:padding="5dip" >
+		    
+		    <ImageButton
+		        android:id="@+id/btn_alle_sperren"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginRight="20dp"
+		        android:background="@drawable/btn_bg"
+		        android:src="@drawable/lock" />
+		    
+		    <ImageButton
+		        android:id="@+id/btn_alle_entsperren"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/btn_bg"
+		        android:layout_marginRight="20dp"
+		        android:src="@drawable/unlock" />
+		    
+		    <ImageButton
+		        android:id="@+id/btn_alle_loeschen"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/btn_bg"
+		        android:src="@drawable/delete" />
+	    </LinearLayout>
+	</RelativeLayout>
+</RelativeLayout>

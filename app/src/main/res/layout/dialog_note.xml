@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/bg_frame"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="5dip" >
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+        android:layout_weight="1"
+        android:background="@drawable/note_bg_repeat" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+		    <EditText
+		        android:id="@+id/title"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:ems="10"
+		        android:background="@null"
+		        android:textSize="18sp"
+		        android:textColor="#587058"
+		        android:hint="@string/title" 
+		        android:inputType="text" />
+		    
+		    <View android:layout_width="fill_parent" android:layout_height="3dip" android:background="#cccccc"
+		        android:layout_marginTop="5dip" android:layout_marginBottom="15dip" />
+		
+		    <EditText
+		        android:id="@+id/content"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:ems="10"
+		        android:background="@null"
+		        android:hint="@string/hier_schreiben"
+		        android:textSize="18sp"
+		        android:textColor="#587498"
+		        android:inputType="textMultiLine" />
+        </LinearLayout>
+    </ScrollView>
+
+	<RelativeLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content">
+	    
+	    <ImageButton
+	        android:id="@+id/btnSpeichern"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal"
+	        android:layout_marginLeft="20dip"
+	        android:background="@drawable/btn_bg"
+	        android:src="@drawable/save" />
+	    
+	    <ImageButton
+	        android:id="@+id/btnDelete"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal"
+	        android:layout_marginLeft="20dip"
+	        android:layout_toRightOf="@id/btnSpeichern"
+	        android:background="@drawable/btn_bg"
+	        android:src="@drawable/delete1" />
+	    
+	    <ImageButton
+	        android:id="@+id/btnReturn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal"
+	        android:layout_marginLeft="20dip"
+	        android:layout_toRightOf="@id/btnDelete"
+	        android:background="@drawable/btn_bg"
+	        android:src="@drawable/zurueck" />
+	
+	</RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_frame"
+    android:orientation="vertical" >
+
+<ScrollView 
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="368dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+	    <TextView
+	        android:layout_gravity="center_horizontal"
+	        android:id="@+id/dialog_name"
+	        android:layout_marginBottom="5dp"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Name" />
+		    
+	    <TextView
+	        android:layout_marginBottom="5dp"
+	        android:id="@+id/dialog_email"
+	        android:layout_gravity="center_horizontal"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:text="Emailadresse" />
+	    
+	    <TextView
+	        android:layout_marginBottom="5dp"
+	        android:id="@+id/dialog_anmeldedatum"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal"
+	        android:text="Anmeldedatum" />
+	    		    
+	    <TextView
+	        android:id="@+id/dialog_status"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal"
+	        android:text="Status" />
+	        
+	    <TextView
+	        android:id="@+id/list_meldung"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="5dp"
+	        android:layout_gravity="center_horizontal"
+	        android:text="Meldungen" />
+
+	    <ListView
+	        android:id="@+id/user_meldungen"
+	        android:layout_width="fill_parent"
+	        android:layout_height="176dp"
+	        android:layout_marginBottom="10dp"
+	        android:layout_marginTop="5dp"
+	        android:cacheColorHint="#00000000"
+	        android:divider="@android:color/transparent"
+	        android:drawSelectorOnTop="false"
+	        android:listSelector="@android:color/transparent" />
+
+	    <Button
+	        android:id="@+id/btn_user_anschreiben"
+	        android:layout_gravity="center_horizontal"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="User anschreiben"
+            android:textAllCaps="false"
+            android:textColor="@color/btn_txt_color" />
+	    	    		    	    
+	    </LinearLayout>
+	</ScrollView>	    
+    
+    <LinearLayout
+        android:id="@+id/menubar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|center_horizontal"
+        android:padding="5dip" >
+	    
+	    <ImageButton
+	        android:contentDescription="@string/desc"
+	        android:id="@+id/dialog_cancel"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="7dip"
+	        android:src="@drawable/cancel" />
+	    
+	    <ImageButton
+	        android:contentDescription="@string/desc"
+	        android:id="@+id/dialog_sperren"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="7dip"
+	        android:src="@drawable/lock" />
+	    	    
+	    <ImageButton
+	        android:contentDescription="@string/desc"
+	        android:id="@+id/dialog_entsperren"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="7dip"
+	        android:src="@drawable/unlock" />
+	    
+	    <ImageButton
+	        android:contentDescription="@string/desc"
+	        android:id="@+id/dialog_loeschen"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/delete" />
+    </LinearLayout>
+
+</LinearLayout>

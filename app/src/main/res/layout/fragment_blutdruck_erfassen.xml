@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_frame">
+    
+    <ImageView 
+        android:id="@+id/img_herz"
+        android:layout_width="wrap_content"
+        android:contentDescription="@string/desc"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtLabel"
+        android:src="@drawable/meine_gesundheit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/txtLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dip"
+        android:text="@string/blutdruck"
+        android:textSize="16sp" />
+    
+    <EditText
+        android:id="@+id/datum"
+        android:layout_below="@id/img_herz"
+        android:layout_marginTop="40dip"
+        android:layout_width="105dip"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:layout_marginLeft="50dip"
+        android:layout_marginBottom="10dip"
+		android:ellipsize="start"
+    	android:gravity="center_horizontal"
+        android:background="@drawable/txt_bg_rounded_corner"
+        android:textSize="16sp"
+        android:inputType="date"/>
+
+    <EditText
+        android:id="@+id/uhrzeit"
+        android:layout_below="@id/img_herz"
+        android:layout_marginTop="40dip"
+        android:layout_width="80dip"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:layout_toRightOf="@id/datum"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+		android:ellipsize="start"
+    	android:gravity="center_horizontal"
+        android:background="@drawable/txt_bg_rounded_corner"
+        android:textSize="16sp"
+        android:inputType="date"/>
+
+    <EditText
+         android:id="@+id/txt_systolisch"
+         android:layout_width="105dip"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/datum"
+         android:layout_marginTop="20dip"
+         android:layout_marginLeft="50dip"
+         android:layout_marginBottom="10dip"
+         android:layout_marginRight="20dip"
+         android:background="@drawable/txt_bg_rounded_corner"
+         android:hint="@string/hint_systolisch"
+         android:inputType="number"
+		 android:ellipsize="start"
+    	 android:gravity="center_horizontal"
+         android:padding="10dip"
+         android:singleLine="true"
+         android:textColor="@color/input_anmeldung"
+         android:textColorHint="@color/hint_color" />
+
+     <EditText
+         android:id="@+id/txt_diastolisch"
+         android:layout_width="80dip"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/datum"
+         android:layout_marginTop="20dip"
+         android:layout_toRightOf="@id/txt_systolisch"
+         android:padding="10dip"
+         android:layout_marginBottom="10dip"
+         android:background="@drawable/txt_bg_rounded_corner"
+         android:hint="@string/hint_diastolisch"
+		 android:ellipsize="start"
+    	 android:gravity="center_horizontal"
+         android:inputType="number"
+         android:singleLine="true"
+         android:textColor="@color/input_anmeldung"
+         android:textColorHint="@color/hint_color" />
+
+     <TextView
+         android:id="@+id/txt_einheit1"
+         android:layout_width="90dip"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/datum"
+         android:layout_marginTop="20dip"
+         android:layout_toRightOf="@id/txt_diastolisch"
+         android:padding="10dip"
+         android:layout_marginBottom="10dip"
+         android:text="@string/einheit1"
+         android:textSize="16sp" />
+
+     <EditText
+         android:id="@+id/txt_puls"
+         android:layout_width="205dip"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/txt_systolisch"
+         android:layout_marginTop="20dip"
+         android:padding="10dip"
+         android:layout_marginLeft="50dip"
+         android:layout_marginBottom="10dip"
+         android:background="@drawable/txt_bg_rounded_corner"
+         android:hint="@string/hint_puls"
+		 android:ellipsize="start"
+    	 android:gravity="center_horizontal"
+         android:inputType="number"
+         android:singleLine="true"
+         android:textColor="@color/input_anmeldung"
+         android:textColorHint="@color/hint_color" />
+
+     <TextView
+         android:id="@+id/txt_einheit2"
+         android:layout_width="90dip"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/txt_systolisch"
+         android:layout_marginTop="20dip"
+         android:layout_toRightOf="@id/txt_puls"
+         android:padding="10dip"
+         android:layout_marginBottom="10dip"
+         android:text="@string/einheit2"
+         android:textSize="16sp" />
+
+     <Button
+         android:id="@+id/btn_speichern"
+         android:layout_width="205dip"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="50dip"
+         android:layout_marginTop="20dip"
+  	     android:layout_below="@id/txt_einheit2"
+         android:background="@drawable/btn_bg_rounded_corner"
+         android:text="@string/btn_speichern"
+         android:textColor="@color/btn_txt_color" />
+     
+     
+</RelativeLayout>

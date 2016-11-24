@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_frame"
+    android:orientation="vertical" >
+
+<!--     style="@style/background"
+ -->    
+ 	<include layout="@layout/top" />
+
+    <ExpandableListView
+        android:id="@+id/lvExp"
+        android:layout_width="fill_parent"
+        android:layout_height="362dp"
+        android:groupIndicator="@drawable/play_expand_background"
+        android:listSelector="@drawable/play_expand_seletor"
+        android:scrollbars="none" />
+
+    <TextView
+        android:id="@android:id/empty"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/keine_note" />
+    
+	<View android:layout_width="fill_parent" android:layout_height="2dip" android:background="#333333" />
+	
+    <LinearLayout
+        android:id="@+id/menubar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dip" >
+	    <ImageButton
+	        android:id="@+id/new_btn_notizen"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/btn_bg"
+			android:layout_marginEnd="20dp"
+			android:layout_marginRight="20dp"
+	        android:src="@drawable/new_doc" />
+	    <ImageButton
+	        android:id="@+id/sort_btn_notizen"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/btn_bg"
+	        android:src="@drawable/sort" />
+    </LinearLayout>
+
+</LinearLayout>

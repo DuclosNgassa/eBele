@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_frame" >
+
+    <TextView
+        android:layout_marginTop="20dip"
+        android:id="@+id/textView1"
+    	android:padding="10dip"        
+        android:layout_marginLeft="20dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/letzte_blutungstag"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/letzteblutungstag"
+        android:layout_width="115dip"
+        android:layout_marginLeft="25dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView1"
+        android:background="@drawable/txt_bg_rounded_corner"
+        android:inputType="date"
+        android:padding="10dip" >
+
+        <requestFocus />
+    </EditText>
+    
+    <TextView
+        android:layout_marginTop="20dip"
+        android:id="@+id/zykluslaenge"
+        android:padding="10dip"        
+    	android:layout_below="@id/letzteblutungstag"
+        android:layout_marginLeft="20dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zyklus_laenge"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/txtzykluslaenge"
+        android:layout_width="115dip"
+        android:layout_marginLeft="25dip"
+        android:layout_marginBottom="25dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/zykluslaenge"
+        android:background="@drawable/txt_bg_rounded_corner"
+        android:hint="@string/zyklus"
+		android:ellipsize="start"
+    	android:gravity="center_horizontal"
+        android:inputType="number"
+        android:padding="10dip" >
+
+    </EditText>
+    
+   </RelativeLayout>

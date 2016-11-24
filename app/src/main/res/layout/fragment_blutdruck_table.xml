@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_frame"
+    android:orientation="vertical" >
+    
+    <ScrollView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        
+        <LinearLayout 
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+       	
+		    <TextView 
+		        android:id="@+id/titel_bewertung"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:text="Blutdrucktabelle zur Analyse"
+		        android:gravity="center_horizontal"
+		        android:textStyle="bold" />
+		    
+		    <TableLayout 
+		        android:id="@+id/blutdruck_table_bewertung"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:stretchColumns="0" >
+		
+		        <TableRow 
+		            android:id="@+id/tableHeaderAnalyse" >
+		            
+		            <TextView 
+		                android:id="@+id/bewertung"
+		                style="@style/TableHeader"
+		                android:text="@string/bewertung"/>
+		            <TextView 
+		                android:id="@+id/systolisch"
+		                style="@style/TableHeader"
+		                android:text="@string/systolisch"/>
+		            <TextView 
+		                android:id="@+id/diastolisch"
+		                style="@style/TableHeader"
+		                android:text="@string/diastolisch"/>
+		            	
+		        </TableRow>
+		    </TableLayout>
+
+		    <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical" >
+			    		    
+			    <View
+			        android:id="@+id/line"
+			        android:layout_width="fill_parent"
+			        android:layout_height="5dip"
+			        android:layout_marginBottom="5dip"
+			        android:background="#777777" />
+			    			    			    		    
+		    </LinearLayout>
+		    
+		    <TextView 
+		        android:id="@+id/titel"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="30dip"
+		        android:text="Ihre Blutdruckswerte"
+		        android:gravity="center_horizontal"
+		        android:textStyle="bold" />
+		    
+		    <TableLayout 
+		        android:id="@+id/blutdruck_table"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:stretchColumns="0" >
+		
+		        <TableRow 
+		            android:id="@+id/tableHeader" >
+		            
+		            <TextView 
+		                android:id="@+id/blutdruck_nr"
+		                style="@style/TableHeader"
+		                android:text="@string/nr"/>
+<!-- 		            <TextView 
+		                android:id="@+id/blutdruck_id"
+		                style="@style/TableHeader"
+		                android:text="@string/id"
+		                android:visibility="invisible"/>
+ -->		    
+ 			        <TextView 
+		                android:id="@+id/blutdruck_datum"
+		                style="@style/TableHeader"
+		                android:text="@string/erstellt_datum"/>
+		            <TextView 
+		                android:id="@+id/blutdruck_systolisch"
+		                style="@style/TableHeader"
+		                android:text="@string/systolisch"/>
+		            <TextView 
+		                android:id="@+id/blutdruck_diastolisch"
+		                style="@style/TableHeader"
+		                android:text="@string/diastolisch"/>
+		            	
+		        </TableRow>
+		    </TableLayout>
+		
+		    <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="41dp"
+		        android:layout_marginTop="20dip"
+		        android:orientation="horizontal"
+		        android:gravity="center_horizontal" >
+		
+		        <ImageButton
+		            android:id="@+id/first"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginRight="10dip"
+		            android:background="@null"
+		            android:src="@drawable/first" />
+		
+		        <ImageButton
+		            android:id="@+id/previous"
+		            android:layout_width="wrap_content"
+		            android:background="@null"
+		            android:layout_marginRight="10dip"
+		            android:layout_height="wrap_content"
+		            android:src="@drawable/previous" />
+		
+		        <ImageButton
+		            android:id="@+id/next"
+		            android:layout_width="wrap_content"
+		            android:background="@null"
+		            android:layout_marginRight="10dip"
+		            android:layout_height="wrap_content"
+		            android:src="@drawable/next" />
+		
+		        <ImageButton
+		            android:id="@+id/last"
+		            android:background="@null"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:src="@drawable/last" />
+		
+		    </LinearLayout>
+	        
+	        <Button
+	            android:id="@+id/btn_arzt_senden"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="20dip"
+	            android:background="@null"
+	            android:text="@string/als_email_senden"
+	            android:textAllCaps="false"
+	            android:textColor="@color/btn_txt_color"
+	            android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

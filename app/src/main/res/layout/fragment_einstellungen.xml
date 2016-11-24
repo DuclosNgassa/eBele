@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@color/bg_frame" >
+ 
+    <RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:background="@color/bg_frame"
+	    android:orientation="vertical"
+	    android:layout_marginStart="10dp"
+	    android:layout_marginEnd="10dp"
+	    android:padding="10dp" >
+    
+ 
+	    <TextView
+	        android:id="@+id/titel"
+	        android:layout_marginTop="20dp"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:text="EINSTELLUNG" />
+
+	    <View
+	        android:id="@+id/line"
+	        android:layout_width="200dip"
+	        android:layout_centerHorizontal="true"
+	        android:layout_height="2dip"
+	        android:layout_marginTop="10dp"
+	        android:layout_below="@id/titel"
+	        android:background="#777777" />
+	    	    
+	    <TextView
+	        android:id="@+id/txtname"
+	        android:layout_width="120dp"
+	        android:layout_marginEnd="10dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/line"
+            android:layout_marginTop="40dp"
+	        android:text="@string/hint_name" />
+	    
+        <EditText
+            android:id="@+id/name"
+	        android:layout_below="@id/line"
+	        android:layout_toEndOf="@id/txtname"
+	        android:layout_width="140dp"
+            android:layout_marginTop="40dp"
+            android:layout_alignBaseline="@id/txtname"
+            android:layout_height="wrap_content"
+            android:background="@drawable/txt_bg_rounded_corner"
+            android:inputType="textCapWords"
+            android:padding="10dp"
+            android:textColor="@color/input_registrierung"
+            android:textColorHint="@color/hint_color" />
+ 
+	    <TextView
+	        android:id="@+id/txtemail"
+	        android:layout_marginEnd="10dp"
+	        android:layout_width="120dp"
+            android:layout_marginTop="20dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/name"
+	        android:text="@string/hint_email" />
+	    
+        <EditText
+            android:id="@+id/email"
+	        android:layout_below="@id/name"
+	        android:layout_toEndOf="@id/txtemail"
+	        android:layout_width="140dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignBaseline="@id/txtemail"
+            android:layout_height="wrap_content"
+            android:background="@drawable/txt_bg_rounded_corner"
+            android:padding="10dp"
+            android:textColor="@color/input_registrierung"
+            android:textColorHint="@color/hint_color" 
+            android:inputType="textEmailAddress"/>
+ 
+	    <TextView
+	        android:id="@+id/txtemail2"
+	        android:layout_marginEnd="10dp"
+	        android:layout_width="120dp"
+            android:layout_marginTop="20dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/email"
+	        android:text="@string/hint_email_wiederholt" />
+	    
+        <EditText
+            android:id="@+id/email2"
+	        android:layout_below="@id/email"
+	        android:layout_toEndOf="@id/txtemail2"
+	        android:layout_width="140dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignBaseline="@id/txtemail2"
+            android:layout_height="wrap_content"
+            android:background="@drawable/txt_bg_rounded_corner"
+            android:padding="10dp"
+            android:textColor="@color/input_registrierung"
+            android:hint="@string/hint_email_wiederholt"
+            android:textColorHint="@color/hint_color" 
+            android:inputType="textEmailAddress"/>
+        
+        <TextView
+	        android:id="@+id/txtstichtag"
+	        android:layout_marginEnd="10dp"
+	        android:layout_width="120dp"
+            android:layout_marginTop="20dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/email2"
+	        android:text="Stichtag" />
+	    
+        <EditText
+            android:id="@+id/stichtag"
+	        android:layout_below="@id/email2"
+	        android:layout_toEndOf="@id/txtstichtag"
+	        android:layout_width="140dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignBaseline="@id/txtstichtag"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/txt_bg_rounded_corner"
+            android:padding="10dp"
+            android:textColor="@color/input_registrierung"
+            android:textColorHint="@color/hint_color" />
+        
+	    <TextView
+	        android:id="@+id/txterstelltdatum"
+	        android:layout_width="120dp"
+	        android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/stichtag"
+	        android:text="Registriert am" />
+	    
+        <EditText
+            android:editable="false"
+            android:id="@+id/erstelltdatum"
+	        android:layout_below="@id/stichtag"
+	        android:layout_toEndOf="@id/txterstelltdatum"
+	        android:layout_width="140dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignBaseline="@id/txterstelltdatum"
+            android:layout_height="wrap_content"
+            android:background="@drawable/txt_bg_rounded_corner"
+            android:padding="10dp"
+            android:textColor="@color/input_registrierung"
+            android:textColorHint="@color/hint_color" /> 
+ 
+        
+	    <TextView
+	        android:id="@+id/txtsecret"
+	        android:layout_width="120dp"
+            android:layout_marginTop="20dp"
+	        android:layout_marginEnd="10dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/erstelltdatum"
+	        android:text="Gehimnis" />
+	    
+        <EditText
+            android:id="@+id/secret"
+	        android:layout_below="@id/erstelltdatum"
+	        android:layout_toEndOf="@id/txtsecret"
+	        android:layout_width="140dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignBaseline="@id/txtsecret"
+            android:layout_height="wrap_content"
+            android:background="@drawable/txt_bg_rounded_corner"
+            android:padding="10dp"
+            android:hint="@string/hint_geheimnis"
+            android:inputType="textMultiLine"
+            android:textColor="@color/input_registrierung"
+            android:textColorHint="@color/hint_color" /> 
+        
+	    <TextView
+	        android:id="@+id/txtneusecret"
+	        android:layout_width="120dp"
+            android:layout_marginTop="20dp"
+	        android:layout_marginEnd="10dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/secret"
+	        android:text="Neues Gehimnis" />
+	    
+        <EditText
+            android:id="@+id/neusecret"
+	        android:layout_below="@id/secret"
+	        android:layout_toEndOf="@id/txtneusecret"
+	        android:layout_width="140dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignBaseline="@id/txtneusecret"
+            android:layout_height="wrap_content"
+            android:background="@drawable/txt_bg_rounded_corner"
+            android:padding="10dp"
+            android:hint="@string/hint_geheimnis2"
+            android:inputType="textMultiLine"
+            android:textColor="@color/input_registrierung"
+            android:textColorHint="@color/hint_color" /> 
+        
+        <TextView
+	        android:id="@+id/txtpasswort"
+	        android:layout_width="120dp"
+	        android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/neusecret"
+	        android:text="Passwort" />
+	    
+        <EditText
+            android:id="@+id/passwort"
+	        android:layout_below="@id/neusecret"
+	        android:layout_toEndOf="@id/txtpasswort"
+	        android:layout_width="140dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignBaseline="@id/txtpasswort"
+            android:layout_height="wrap_content"
+            android:background="@drawable/txt_bg_rounded_corner"
+            android:padding="10dp"
+            android:hint="@string/hint_passwort"
+            android:textColor="@color/input_registrierung"
+            android:inputType="textPassword" /> 
+        
+	    <TextView
+	        android:id="@+id/txtneupasswort"
+	        android:layout_width="120dp"
+	        android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/passwort"
+	        android:text="Neues Passwort" />
+	    
+        <EditText
+            android:id="@+id/neupasswort"
+	        android:layout_below="@id/passwort"
+	        android:layout_toEndOf="@id/txtneupasswort"
+	        android:layout_width="140dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignBaseline="@id/txtneupasswort"
+            android:layout_height="wrap_content"
+            android:background="@drawable/txt_bg_rounded_corner"
+            android:padding="10dp"
+            android:textColor="@color/input_registrierung"
+            android:hint="@string/hint_passwortNeu"
+            android:inputType="textPassword"/> 
+        
+	    <TextView
+	        android:id="@+id/txtneupasswort2"
+	        android:layout_width="120dp"
+	        android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/neupasswort"
+	        android:text="Neues Passwort wiederholen" />
+	    
+        <EditText
+            android:id="@+id/neupasswort2"
+	        android:layout_below="@id/neupasswort"
+	        android:layout_toEndOf="@id/txtneupasswort2"
+	        android:layout_width="140dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignBaseline="@id/txtneupasswort2"
+            android:layout_height="wrap_content"
+            android:background="@drawable/txt_bg_rounded_corner"
+            android:hint="@string/hint_passwortNeu2"
+            android:padding="10dp"
+            android:textColor="@color/input_registrierung"
+            android:inputType="textPassword"/> 
+        
+	    <View
+	        android:id="@+id/line2"
+	        android:layout_width="200dip"
+	        android:layout_centerHorizontal="true"
+	        android:layout_height="2dip"
+	        android:layout_marginTop="10dp"
+	        android:layout_below="@id/neupasswort2"
+	        android:background="#777777" />
+        
+	    <CheckBox
+	        android:id="@+id/chkSchliessen"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="20dp"
+	        android:layout_below="@id/line2"
+	        android:text="@string/chk_schliessen" />
+	        
+	    <CheckBox
+	        android:id="@+id/chkloeschen"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="20dp"
+	        android:layout_below="@id/chkSchliessen"
+	        android:text="@string/chk_loeschen" />
+	    
+	    <Button
+            android:id="@+id/btnEditOrStore"
+	        android:layout_below="@id/chkloeschen"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/btn_bg_rounded_corner"
+            android:text="@string/aendern"
+            android:textColor="@color/btn_txt_color" />
+        
+        </RelativeLayout>
+</ScrollView>

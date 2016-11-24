@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ap="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_frame"
+    android:orientation="vertical" >
+
+    <com.androidplot.xy.XYPlot
+        android:id="@+id/xyplot"
+        android:layout_width="fill_parent"
+        android:layout_height="407dip"
+	    title="Verbindungsabläufe"
+        android:background="@color/bg_frame" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="41dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:background="@null"
+            android:src="@drawable/first" />
+
+        <ImageButton
+            android:layout_marginRight="10dip"
+            android:background="@null"
+            android:id="@+id/previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/previous" />
+
+        <ImageButton
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:background="@null"
+            android:src="@drawable/next" />
+
+        <ImageButton
+            android:id="@+id/last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/last" />
+
+    </LinearLayout>
+
+</LinearLayout>

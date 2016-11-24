@@ -1,0 +1,113 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_frame"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="info.softsolution.ebele.fragment.FeedbackFragment">
+
+    <TextView
+        android:id="@+id/header1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/Bewertung_Header1"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/header2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/Bewertung_Header2"
+        android:textSize="15sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/header3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"
+        android:text="@string/Bewertung_Header3" />
+
+    <RadioGroup
+        android:id="@+id/radioZufriedenheitGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/radioSuper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:checked="true"
+            android:drawableLeft="@drawable/super1"
+            android:text="@string/super_super" />
+
+        <RadioButton
+            android:id="@+id/radioBefriedigend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:drawableLeft="@drawable/befriedigend"
+            android:text="@string/befriedigend" />
+
+        <RadioButton
+            android:id="@+id/radioSchlecht"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:drawableLeft="@drawable/schlecht1"
+            android:text="@string/schlecht" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wuensche"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/anmerkung"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/txt_bg_rounded_corner"
+        android:hint="@string/hint_wuensche"
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:padding="10dp"
+        android:scrollHorizontally="false"
+        android:singleLine="false"
+        android:textColor="@color/input_registrierung"
+        android:textColorHint="@color/input_registrierung_hint" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/btnSpeichern"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_bg"
+            android:src="@drawable/save" />
+
+        <ImageButton
+            android:id="@+id/btnReturn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dip"
+            android:background="@drawable/btn_bg"
+            android:src="@drawable/zurueck" />
+    </LinearLayout>
+
+</LinearLayout>

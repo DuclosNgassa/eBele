@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_frame"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+ 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+ 
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/txt_bg_rounded_corner"
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/input_anmeldung"
+            android:textColorHint="@color/hint_color" />
+ 
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/txt_bg_rounded_corner"
+            android:hint="@string/hint_passwort"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/input_anmeldung"
+            android:textColorHint="@color/hint_color" />
+ 
+        <!-- anmeldung Button -->
+ 
+        <Button
+            android:id="@+id/btnAnmeldung"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/btn_bg_rounded_corner"
+            android:text="@string/btn_anmeldung"
+            android:textColor="@color/btn_txt_color" />
+ 
+        <!-- Link to anmeldung Screen -->
+ 
+        <Button
+            android:id="@+id/btnLinkToRegisterScreen"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@null"
+            android:text="@string/btn_link_to_registrierung"
+            android:textAllCaps="false"
+            android:textColor="@color/btn_txt_color"
+            android:textSize="15sp" />
+        
+        <Button
+            android:id="@+id/btnLinkToWiederherstellungScreen"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:background="@null"
+            android:text="@string/btn_link_to_wiederherstellung"
+            android:textAllCaps="false"
+            android:textColor="@color/btn_txt_color"
+            android:textSize="15sp" />
+        
+    </LinearLayout>
+ 
+</LinearLayout>

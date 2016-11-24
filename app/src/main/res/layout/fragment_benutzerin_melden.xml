@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_frame"
+    android:orientation="vertical"
+    android:padding="10dp" >
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+	    android:layout_marginTop="30dip"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+ 
+        <EditText
+            android:id="@+id/wer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/txt_bg_rounded_corner"
+            android:hint="@string/hint_wer"
+            android:inputType="text"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/input_anmeldung"
+            android:textColorHint="@color/hint_color" />
+		
+		<EditText
+            android:id="@+id/wann"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/txt_bg_rounded_corner"
+            android:hint="@string/hint_wann"
+            android:inputType="date"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/input_anmeldung"
+            android:textColorHint="@color/hint_color" />        
+ 
+        <EditText
+            android:id="@+id/was"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/txt_bg_rounded_corner"
+            android:hint="@string/hint_meldung"
+            android:inputType="textMultiLine"
+            android:lines="7"
+            android:scrollHorizontally="false"
+            android:padding="10dp"
+            android:singleLine="false"
+            android:textColor="@color/input_registrierung"
+            android:textColorHint="@color/input_registrierung_hint" />
+ 
+        <!-- anmeldung Button -->
+ 
+        <Button
+            android:id="@+id/btnMelden"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/btn_bg_rounded_corner"
+            android:text="@string/meldung_senden"
+            android:textColor="@color/btn_txt_color" />
+        
+ 
+        
+    </LinearLayout>
+ 
+</LinearLayout>

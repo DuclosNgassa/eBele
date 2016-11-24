@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_frame"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/note_list"
+        android:layout_width="fill_parent"
+        android:layout_height="386dp"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="15dip"
+        android:cacheColorHint="#00000000"
+        android:divider="@android:color/transparent"
+        android:drawSelectorOnTop="false"
+        android:listSelector="@android:color/transparent" />
+
+    <TextView
+        android:id="@android:id/empty"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/keine_note" />
+    
+	<View
+	    android:id="@+id/line"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="2dip" 
+	    android:background="#333333" />
+	
+    <LinearLayout
+        android:id="@+id/menubar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dip" >
+	    <ImageButton
+	        android:id="@+id/new_btn_notizen"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="20dp"
+	        android:background="@drawable/btn_bg"
+	        android:src="@drawable/new_doc" />
+	    <ImageButton
+	        android:id="@+id/sort_btn_notizen"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/btn_bg"
+	        android:src="@drawable/sort" />
+	   
+	  </LinearLayout>
+
+</LinearLayout>

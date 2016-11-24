@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	
+	<LinearLayout 
+	    android:id="@+id/erste"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_marginTop="120dp">
+	    
+		    <ImageButton
+		        android:id="@+id/klinik"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="10dp"
+		        android:layout_marginLeft="65dp"
+		        android:layout_marginRight="75dp"
+		        android:background="@drawable/txt_bg_rounded_corner"
+		        android:src="@drawable/klinik" />
+		    
+			<ImageButton
+		        android:id="@+id/studentin"
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+		        android:layout_marginTop="10dp"
+		        android:background="@drawable/txt_bg_rounded_corner"
+		        android:src="@drawable/studentin" />
+    
+	</LinearLayout>    
+		    
+	<LinearLayout 
+	    android:id="@+id/zweite"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/erste"
+	    android:orientation="horizontal">
+	    
+			<TextView 
+	            android:id="@+id/txtauslaenderin"
+		        android:layout_marginTop="10dp"
+		        android:layout_marginRight="70dp"
+		        android:layout_marginLeft="65dp"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/btn_bg_rounded_corner"
+	            android:text="@string/klinik"
+	            android:textColor="@color/btn_txt_color" />
+			<TextView 
+	            android:id="@+id/txtstudentin"
+		        android:layout_marginTop="10dp"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/btn_bg_rounded_corner"
+	            android:text="@string/studentin"
+	            android:textColor="@color/btn_txt_color" />
+					    
+	</LinearLayout>    
+	
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:id="@+id/dritte"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_below="@id/zweite">
+
+		<ImageButton
+		    android:id="@+id/auslaenderin"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="30dp"
+	        android:layout_marginLeft="65dp"
+	        android:layout_marginRight="80dp"
+		    android:background="@drawable/txt_bg_rounded_corner"
+		    android:src="@drawable/auslaender" />
+		    
+	    <ImageButton
+	        android:id="@+id/schwangerschaftsverlauf"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="30dp"
+	        android:background="@drawable/txt_bg_rounded_corner"
+	        android:src="@drawable/schwangerschaftsverlauf" />
+
+	</LinearLayout>    
+
+	<LinearLayout 
+	    android:id="@+id/vierte"
+	    android:layout_below="@id/dritte"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal">
+	    
+			<TextView 
+	            android:id="@+id/txtklinik"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+		        android:layout_marginTop="10dp"
+		        android:layout_marginLeft="50dp"
+		        android:layout_marginRight="35dp"
+	            android:background="@drawable/btn_bg_rounded_corner"
+	            android:text="@string/auslaenderin"
+	            android:textColor="@color/btn_txt_color" />
+			<TextView 
+	            android:id="@+id/txtschwangerschaftsverlauf"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+		        android:layout_marginTop="10dp"
+	            android:background="@drawable/btn_bg_rounded_corner"
+	            android:text="@string/schwangerschaft"
+	            android:textColor="@color/btn_txt_color" />
+					    
+    
+	</LinearLayout>    
+			    		    
+</RelativeLayout>

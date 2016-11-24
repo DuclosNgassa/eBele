@@ -1,0 +1,192 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:background="@color/bg_frame" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="5dp" >
+
+	    <ImageView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:id="@+id/bild"
+	        android:src="@drawable/photo"
+	        android:layout_alignParentLeft="true"
+	        android:layout_margin="5dp"
+	        android:layout_marginTop="10dp"
+	        android:background="@drawable/txt_bg_rounded_corner"/>
+	    
+        <Button
+            android:id="@+id/btn_bild"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bild"
+            android:layout_marginTop="10dp"
+	        android:layout_alignParentLeft="true"
+	        android:layout_margin="5dp"
+            android:background="@drawable/btn_bg_rounded_corner"
+            android:text="@string/bild_auswaehlen" />
+
+        <TextView
+            android:id="@+id/typ"
+            android:layout_below="@id/btn_bild"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentLeft="true"
+            android:padding="10dp"
+            android:layout_margin="5dp"
+            android:text="Typ" />
+
+        <Spinner
+            android:id="@+id/typ_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/titel"
+            android:layout_below="@id/btn_bild"
+            android:padding="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/typ" />
+
+        <EditText
+            android:id="@+id/titel"
+            android:layout_below="@id/typ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:padding="10dp"
+            android:layout_margin="5dp"
+            android:hint="Titel"
+            android:layout_marginTop="10dp"
+            android:inputType="text"
+            android:background="@drawable/txt_bg_rounded_corner"
+            android:singleLine="true" />
+		
+        <EditText
+            android:id="@+id/beschreibung"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/titel"
+            android:background="@drawable/txt_bg_rounded_corner"
+            android:gravity="center"
+            android:hint="Schreiben Sie eine Kurze Beschreibung hier!"
+            android:inputType="textMultiLine" />
+
+        <EditText
+            android:id="@+id/link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_below="@id/beschreibung"
+            android:layout_margin="5dp"
+            android:background="@drawable/txt_bg_rounded_corner"
+            android:layout_marginTop="10dp"
+            android:hint="Link"
+            android:singleLine="true" />
+
+		<LinearLayout
+            android:id="@+id/layout1"
+		    android:orientation="horizontal"
+			android:layout_height="match_parent" 
+            android:layout_below="@id/link"
+			android:layout_width="match_parent">        
+        
+	        <EditText
+	            android:id="@+id/strasse"
+	            android:layout_weight="5" 
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_alignRight="@+id/btnAbbrechen"
+	            android:layout_margin="5dp"
+	            android:background="@drawable/txt_bg_rounded_corner"
+	            android:hint="Straße"
+	            android:padding="10dp" />
+	        
+			<EditText
+	            android:id="@+id/hausnummer"
+	            android:layout_weight="2" 
+	            android:layout_width="0dp"
+	            android:layout_margin="5dp"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10dp"
+	            android:background="@drawable/txt_bg_rounded_corner"
+	            android:hint="Hausnr."
+	            android:inputType="number"
+	            android:padding="10dp" />
+
+		</LinearLayout>			
+		
+		<LinearLayout
+            android:id="@+id/layout2"
+		    android:orientation="horizontal"
+			android:layout_height="match_parent" 
+            android:layout_below="@id/layout1"
+			android:layout_width="match_parent">        
+		
+			<EditText
+	            android:id="@+id/stadt"
+	            android:layout_weight="5" 
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="5dp"
+	            android:layout_marginLeft="20dp"
+	            android:background="@drawable/txt_bg_rounded_corner"
+	            android:hint="Stadt"
+	            android:padding="10dp" />
+	        
+	        <EditText
+	            android:id="@+id/plz"
+	            android:layout_weight="2" 
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:padding="10dp"
+	            android:layout_margin="5dp"
+	            android:background="@drawable/txt_bg_rounded_corner"
+	            android:layout_marginLeft="10dp"
+	            android:inputType="number"
+	            android:hint="Plz"/>
+
+	    </LinearLayout>
+	        
+		<LinearLayout
+            android:id="@+id/layout3"
+		    android:orientation="horizontal"
+		    android:gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+			android:layout_height="match_parent" 
+            android:layout_below="@id/layout2"
+			android:layout_width="match_parent">
+	                
+			<Button
+	            android:id="@+id/btnSpeichern"
+	            android:layout_weight="1" 
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="5dp"
+	            android:layout_marginRight="20dp"
+	            android:background="@drawable/btn_bg_rounded_corner"
+	            android:text="Speichern" />
+	
+	        <Button
+	            android:layout_weight="1" 
+	            android:id="@+id/btnAbbrechen"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_marginRight="5dp"
+	            android:background="@drawable/btn_bg_rounded_corner"
+	            android:text="Abbrechen" />
+		
+		</LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
