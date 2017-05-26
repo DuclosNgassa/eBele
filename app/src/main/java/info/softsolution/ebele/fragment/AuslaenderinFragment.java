@@ -57,7 +57,8 @@ public class AuslaenderinFragment  extends Fragment{
         
         if(infoList.isEmpty())
         {
-        	loadAllInfo(Utils.METHOD.readAllWithTyp.toString(), Information.infoTyp.AUSLAENDERIN.toString());
+            //TODO DB-Anbindung
+            //loadAllInfo(Utils.METHOD.readAllWithTyp.toString(), Information.infoTyp.AUSLAENDERIN.toString());
         }
 
         return rootView;
@@ -67,7 +68,8 @@ public class AuslaenderinFragment  extends Fragment{
     public void onResume()
     {
     	super.onResume();
-    	loadAllInfo(Utils.METHOD.readAllWithTyp.toString(), Information.infoTyp.AUSLAENDERIN.toString());
+        //TODO DB-Anbindung
+        //loadAllInfo(Utils.METHOD.readAllWithTyp.toString(), Information.infoTyp.AUSLAENDERIN.toString());
     	Log.e(TAG, "OnResume->LoadAllInfoSchwangerschaftsverlauf->doInBackground");
     }
    

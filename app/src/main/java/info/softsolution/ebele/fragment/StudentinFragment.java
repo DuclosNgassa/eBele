@@ -59,7 +59,8 @@ public class StudentinFragment  extends Fragment{
 
     	if(infoList.isEmpty())
     	{
-    		loadAllInfo(Utils.METHOD.readAllWithTyp.toString(), Information.infoTyp.STUDENTIN.toString());
+            //TODO DB-Anbindung
+            //loadAllInfo(Utils.METHOD.readAllWithTyp.toString(), Information.infoTyp.STUDENTIN.toString());
     	}
 		
 		return rootView;
@@ -69,7 +70,8 @@ public class StudentinFragment  extends Fragment{
     public void onResume()
     {
     	super.onResume();
-    	loadAllInfo(Utils.METHOD.readAllWithTyp.toString(), Information.infoTyp.STUDENTIN.toString());
+        //TODO DB-Anbindung
+        //loadAllInfo(Utils.METHOD.readAllWithTyp.toString(), Information.infoTyp.STUDENTIN.toString());
     	Log.e(TAG, "OnResume->LoadAllInfoStudentin->doInBackground");
     }
    

@@ -262,9 +262,12 @@ public class InfoErfassenFragment extends Fragment implements OnClickListener {
 						{
 							image = getStringImage(bitmap);
 						}
+						//TODO DB-Anbindung
+						/*
 						executeRequest(Utils.METHOD.create.toString(),titel,
 									   beschreibung, email, image, typ, _link, 
 									   _strasse, _hausnr, _plz, _stadt);
+						*/
 						dialog.dismiss();
 					} else {
 						Utils.showToast(getActivity(),

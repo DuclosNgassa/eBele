@@ -1,8 +1,11 @@
 package info.softsolution.ebele.activity;
 
+import android.content.ContentUris;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.CalendarContract;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
@@ -29,6 +32,7 @@ import com.android.volley.VolleyError;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -59,7 +63,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView txtName;
     private Toolbar toolbar;
     private FloatingActionButton fab;
-
+    private DateUtility dateUtility;
+    private Date parsedDate = new Date();
     // urls to load navigation header background image
     // and profile image
 
@@ -80,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG_FEEDBACK = "feedback";
     private static final String TAG_SETTING = "setting";
     private static final String TAG_HELP = "help";
-//    private static final String TAG_LOGOUT = "logout";
+    //    private static final String TAG_LOGOUT = "logout";
 //    public static enum from {NOTIZEN, TAGEBUCH};
     private SessionManager session;
 
@@ -116,9 +121,9 @@ public class MainActivity extends AppCompatActivity {
         this.stichtag = stichtag;
     }
 
-    private String name ;
+    private String name;
     private String email;
-    private String uid ;
+    private String uid;
     private String stichtag;
 
 
@@ -144,6 +149,7 @@ public class MainActivity extends AppCompatActivity {
         setEmail(intent.getStringExtra("email"));
         setStichtag(intent.getStringExtra("stichtag"));
         setUid(intent.getStringExtra("uid"));
+        dateUtility = new DateUtility();
 //        String _from = intent.getStringExtra("from");
 
         // session manager
@@ -197,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
     private void loadNavHeader() {
         // name, website
         txtName.setText("Duclos Ngassa");
-       // txtWebsite.setText("www.softsolutions.cm");
+        // txtWebsite.setText("www.softsolutions.cm");
 
         // loading header background image
         /*Glide.with(this).load(urlNavHeaderBg)
@@ -342,7 +348,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return fragment;
-        }
+    }
 
     private void setToolbarTitle() {
         getSupportActionBar().setTitle(activityTitles[navItemIndex]);
@@ -368,9 +374,24 @@ public class MainActivity extends AppCompatActivity {
                         CURRENT_TAG = TAG_HOME;
                         break;
                     case R.id.nav_agenda:
-                        navItemIndex = 1;
-                        CURRENT_TAG = TAG_AGENDA;
-                        break;
+//                        navItemIndex = 1;
+                        //startActivity(new Intent(MainActivity.this, PrivacyPolicyActivity.class));
+
+                        Intent intent = new Intent();
+                        Uri.Builder builder = CalendarContract.CONTENT_URI.buildUpon();
+                        builder.appendPath("time");
+                        if (dateUtility.getBeginTime() > 0) {
+                            ContentUris.appendId(builder, dateUtility.getBeginTime());
+                        } else {
+                            ContentUris.appendId(builder, parsedDate.getTime());
+                        }
+                        intent.setAction(Intent.ACTION_VIEW);
+                        intent.setData(builder.build());
+                        startActivity(intent);
+                        drawer.closeDrawers();
+                        return true;
+//                        CURRENT_TAG = TAG_AGENDA;
+                    //                      break;
                     case R.id.nav_news:
                         navItemIndex = 2;
                         CURRENT_TAG = TAG_NEWS;
@@ -541,8 +562,7 @@ public class MainActivity extends AppCompatActivity {
             fab.hide();
     }
 
-    private void logoutUser()
-    {
+    private void logoutUser() {
         changeUserStatus(Utils.METHOD.updateUserStatus.toString(), session.getEmail(), User.userStatus.OFFLINE.toString());
     }
 
@@ -551,37 +571,29 @@ public class MainActivity extends AppCompatActivity {
         String tag_string_req = "req_userStatus_setzen";
         StringRequest strReq = new StringRequest(Request.Method.POST,
                 AppConfig.URL_MANAGE_USER,
-                new Response.Listener<String>()
-                {
+                new Response.Listener<String>() {
 
                     @Override
-                    public void onResponse(String response)
-                    {
-                        Log.d(TAG, "BenutzerStatusAenderungsantwort: "+ response.toString());
+                    public void onResponse(String response) {
+                        Log.d(TAG, "BenutzerStatusAenderungsantwort: " + response.toString());
 
-                        try
-                        {
+                        try {
                             JSONObject jObj = new JSONObject(response);
                             boolean error = jObj.getBoolean("error");
-                            if(!error)
-                            {
+                            if (!error) {
                                 Utils.showToast(getApplicationContext(), "Ihre Status wurde erfolgreich ge�ndert!");
                                 session.removeAll();
 //						db.deleteUsers();
                                 //anmeldungactivity ausfuehren
-                                Intent intent = new Intent(MainActivity.this,AnmeldungActivity.class);
+                                Intent intent = new Intent(MainActivity.this, AnmeldungActivity.class);
                                 startActivity(intent);
                                 finish();
-                            }
-                            else
-                            {
+                            } else {
                                 //Fehler beim Speichern
                                 String errorMsg = jObj.getString("error_msg");
                                 Utils.showToast(getApplicationContext(), errorMsg);
                             }
-                        }
-                        catch(JSONException e)
-                        {
+                        } catch (JSONException e) {
                             Log.e(TAG, e.getMessage().toString());
                             e.printStackTrace();
                         }
@@ -589,14 +601,12 @@ public class MainActivity extends AppCompatActivity {
                 }, new Response.ErrorListener() {
 
             @Override
-            public void onErrorResponse(VolleyError error)
-            {
+            public void onErrorResponse(VolleyError error) {
                 Log.e(TAG, "Abmeldungsfehler: " + error.getMessage());
             }
-        }){
+        }) {
             @Override
-            protected Map<String, String> getParams()
-            {
+            protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<>();
                 params.put("method", method);
                 params.put("status", status);
@@ -604,8 +614,41 @@ public class MainActivity extends AppCompatActivity {
                 return params;
             }
         };
-        AppController.getInstance().addToRequestQueue(strReq, tag_string_req);
+        //TODO
+        //   AppController.getInstance().addToRequestQueue(strReq, tag_string_req);
     }
 
+    private class DateUtility {
+        private long beginTime;
+        private long endTime;
+
+        public DateUtility() {
+            beginTime = 0;
+            endTime = 0;
+        }
+
+        public DateUtility(long beginTime, long endTime) {
+            super();
+            this.beginTime = beginTime;
+            this.endTime = endTime;
+        }
+
+        public long getBeginTime() {
+            return beginTime;
+        }
+
+        public void setBeginTime(long beginTime) {
+            this.beginTime = beginTime;
+        }
+
+        public long getEndTime() {
+            return endTime;
+        }
+
+        public void setEndTime(long endTime) {
+            this.endTime = endTime;
+        }
+
+    }
 
 }

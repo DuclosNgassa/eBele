@@ -57,7 +57,8 @@ public class KlinikFragment  extends Fragment{
         
         if(infoList.isEmpty())
         {
-        	loadAllInfo(Utils.METHOD.readAllWithTyp.toString(), Information.infoTyp.KLINIK.toString());
+            //TODO DB-Anbindung
+            //loadAllInfo(Utils.METHOD.readAllWithTyp.toString(), Information.infoTyp.KLINIK.toString());
         }
 		
 		return rootView;
@@ -67,7 +68,8 @@ public class KlinikFragment  extends Fragment{
     public void onResume()
     {
     	super.onResume();
-    	loadAllInfo(Utils.METHOD.readAllWithTyp.toString(), Information.infoTyp.KLINIK.toString());
+        //TODO DB-Anbindung
+        //loadAllInfo(Utils.METHOD.readAllWithTyp.toString(), Information.infoTyp.KLINIK.toString());
     	Log.e(TAG, "OnResume->LoadAllInfoKlinik->doInBackground");
     }
    

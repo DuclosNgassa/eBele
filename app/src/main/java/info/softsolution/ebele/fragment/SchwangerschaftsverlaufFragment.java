@@ -55,7 +55,8 @@ public class SchwangerschaftsverlaufFragment extends Fragment{
 
         if(infoList.isEmpty())
         {
-        	loadAllInfo(Utils.METHOD.readAllWithTyp.toString(), Information.infoTyp.SCHWANGERSCHAFT.toString());
+            //TODO
+        	//loadAllInfo(Utils.METHOD.readAllWithTyp.toString(), Information.infoTyp.SCHWANGERSCHAFT.toString());
         }
 		
 		return rootView;
@@ -66,7 +67,8 @@ public class SchwangerschaftsverlaufFragment extends Fragment{
     {
     	super.onResume();
     	infoList.clear();
-    	loadAllInfo(Utils.METHOD.readAllWithTyp.toString(), Information.infoTyp.SCHWANGERSCHAFT.toString());
+    	//TODO DB-Anbindung
+        //loadAllInfo(Utils.METHOD.readAllWithTyp.toString(), Information.infoTyp.SCHWANGERSCHAFT.toString());
 		Log.e(TAG, "OnResume->LoadAllInfoSchwangerschaftsverlauf->doInBackground");
     }
    
