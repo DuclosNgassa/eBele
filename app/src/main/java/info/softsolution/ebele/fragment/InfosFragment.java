@@ -36,13 +36,13 @@ public class InfosFragment extends Fragment {
 		ActionBar actionBar = getActivity().getActionBar();
 		 
 		// Hide Actionbar Icon
-		actionBar.setDisplayShowHomeEnabled(true);
+		//actionBar.setDisplayShowHomeEnabled(true);
  
 		// Hide Actionbar Title
-		actionBar.setDisplayShowTitleEnabled(true);
+		//actionBar.setDisplayShowTitleEnabled(true);
  
 		// Create Actionbar Tabs
-		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+		//actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
  
 		// Set Tab Icon and Titles
 		tabSchwangerschaftVerlauf = actionBar.newTab().setIcon(R.drawable.schwangerschaftsverlauf);

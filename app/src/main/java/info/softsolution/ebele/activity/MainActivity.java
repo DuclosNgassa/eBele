@@ -256,7 +256,15 @@ public class MainActivity extends AppCompatActivity {
                 FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.setCustomAnimations(android.R.anim.fade_in,
                         android.R.anim.fade_out);
-                fragmentTransaction.replace(R.id.frame, fragment, CURRENT_TAG);
+//                if(navItemIndex != 2){
+                    fragmentTransaction.replace(R.id.frame, fragment, CURRENT_TAG);
+//                }
+/*
+                if(navItemIndex == 2){
+                    fragmentTransaction.replace(R.id.result_tabs, fragment, CURRENT_TAG);
+                }
+*/
+
                 fragmentTransaction.commitAllowingStateLoss();
             }
         };
@@ -289,7 +297,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 2:
                 // movies fragment
-                fragment = new InfosFragment();
+             //   fragment = new InfosFragment();
+                fragment = new TabActivity();
                 break;
             case 3:
                 // notifications fragment
@@ -369,7 +378,7 @@ public class MainActivity extends AppCompatActivity {
                 //Check to see which item was being clicked and perform appropriate action
                 switch (menuItem.getItemId()) {
                     //Replacing the main content with ContentFragment Which is our Inbox View;
-                    case R.id.home:
+                    case R.id.nav_home:
                         navItemIndex = 0;
                         CURRENT_TAG = TAG_HOME;
                         break;
@@ -396,6 +405,12 @@ public class MainActivity extends AppCompatActivity {
                         navItemIndex = 2;
                         CURRENT_TAG = TAG_NEWS;
                         break;
+                        // launch new intent instead of loading fragment
+/*
+                        startActivity(new Intent(MainActivity.this, TabActivity.class));
+                        drawer.closeDrawers();
+                        return true;
+*/
                     case R.id.nav_communaute:
                         navItemIndex = 3;
                         CURRENT_TAG = TAG_COMMUNAUTE;
