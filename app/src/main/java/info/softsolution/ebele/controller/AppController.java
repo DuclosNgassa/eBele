@@ -22,10 +22,12 @@ public class AppController extends Application
 
 	private static final String TAG = AppController.class.getSimpleName();
 
+/*
 	public static final String VIBRATE_PREF = "vibrate_pref";
 	public static final String RINGTONE_PREF = "ringtone_pref";
 	public static final String DEFAULT_DATE_FORMAT = "yyyy-MM-dd";
-	
+*/
+
 	
 	public static SharedPreferences prefs;
 	private RequestQueue mRequestQueue;
@@ -108,6 +110,7 @@ public class AppController extends Application
 	}
 	
 	
+/*
 	public static boolean isVibrate()
 	{
 		return prefs.getBoolean(VIBRATE_PREF, true);
@@ -117,4 +120,5 @@ public class AppController extends Application
 	{
 		return prefs.getString(RINGTONE_PREF, android.provider.Settings.System.DEFAULT_NOTIFICATION_URI.toString());
 	}
+*/
 }

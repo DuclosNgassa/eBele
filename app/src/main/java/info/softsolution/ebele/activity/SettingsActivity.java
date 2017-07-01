@@ -50,7 +50,7 @@ public class SettingsActivity extends PreferenceActivity implements OnSharedPref
 //		updatePreference(AppController.TIME_OPTION);
 //		updatePreference(AppController.DATE_RANGE);
 //		updatePreference(AppController.DATE_FORMAT);
-		updatePreference(AppController.RINGTONE_PREF);
+//		updatePreference(AppController.RINGTONE_PREF);
 	}
 	
 	private void updatePreference(String key)
@@ -63,6 +63,7 @@ public class SettingsActivity extends PreferenceActivity implements OnSharedPref
 			return;
 		}
 		
+/*
 		if(AppController.RINGTONE_PREF.equals(key))
 		{
 			Uri ringtoneUri = Uri.parse(AppController.getRingtone());
@@ -72,5 +73,6 @@ public class SettingsActivity extends PreferenceActivity implements OnSharedPref
 				pref.setSummary(ringtone.getTitle(this));
 			}
 		}
+*/
 	}
 }

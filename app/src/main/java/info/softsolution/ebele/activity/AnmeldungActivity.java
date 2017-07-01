@@ -70,7 +70,8 @@ public class AnmeldungActivity extends Activity
 //        readKey(Utils.METHOD.read.toString());
         if(session.getKey(SessionManager.SYM_KEY, SecretKeySpec.class) == null)
         {
-        	readSymKey(Utils.METHOD.read.toString());
+            Utils.METHOD method = Utils.METHOD.read;
+        	readSymKey(method.getMethod());
         }
 
         // Check if user is already logged in or not
@@ -341,7 +342,7 @@ public class AnmeldungActivity extends Activity
                 // Posting parameters to login url
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("email", email);
-//                params.put("password", password);
+                params.put("password", password);
 
                 return params;
             }
